@@ -86,16 +86,16 @@ function createSVGSquares() {
   if (svgElement.value === null) {
     return;
   }
-  const colorArray = ["#a8a8a8", "#799d9f", "#835a65"];
-  const svgns = "http://www.w3.org/2000/svg";
+  const colorArray = ['#a8a8a8', '#799d9f', '#835a65'];
+  const svgns = 'http://www.w3.org/2000/svg';
   let count = 0;
 
   for (let j = 0; j < SQUARE_COUNT; j++) {
     for (let i = 0; i < SQUARE_COUNT; i++) {
       count++;
 
-      let newSquare = document.createElementNS(svgns, "rect");
-      let txt = document.createElementNS(svgns, "text");
+      let newSquare = document.createElementNS(svgns, 'rect');
+      let txt = document.createElementNS(svgns, 'text');
       svgElement.value.appendChild(newSquare);
       svgElement.value.appendChild(txt);
       txt.textContent = String(count);
@@ -110,7 +110,7 @@ function createSVGSquares() {
         }
       });
       gsap.set(txt, {
-        attr: { x: SQUARE_SIZE * i + 100, y: j * SQUARE_SIZE + 115, "text-anchor": "middle" }
+        attr: { x: SQUARE_SIZE * i + 100, y: j * SQUARE_SIZE + 115, 'text-anchor': 'middle' }
       });
     }
   }
